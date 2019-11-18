@@ -1,0 +1,14 @@
+{
+    "python.pythonPath": "D://Epic Games//UE_4.20//Engine//Source//ThirdParty//Python//Win64//python.exe",
+    "python.autoComplete.extraPaths": [ 
+        "D://Epic Games//UE_4.20//Engine//Source//ThirdParty//Python//Win64//Lib",
+        "D://Epic Games//UE_4.20//Engine//Source//ThirdParty//Python//Win64//python27.zip",
+        "D://Epic Games//UE_4.20//Engine//Source//ThirdParty//Python//Win64//DLLs",
+        "D://Epic Games//UE_4.20//Engine//Source//ThirdParty//Python//Win64//lib",
+        "D://Epic Games//UE_4.20//Engine//Source//ThirdParty//Python//Win64//lib//plat-win",
+        "D://Epic Games//UE_4.20//Engine//Source//ThirdParty//Python//Win64//lib//lib-tk",
+        "D://Epic Games//UE_4.20//Engine//Source//ThirdParty//Python//Win64",
+        "D://Epic Games//UE_4.20//Engine//Source//ThirdParty//Python//Win64//lib//site-package",
+        "C:/Users/Administrator/Documents/Unreal Projects/MyProject420/Intermediate/PythonStub"
+      ], 
+}
