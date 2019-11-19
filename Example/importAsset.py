@@ -8,14 +8,14 @@
 
 # 导入资产（可以是任意类型资产）
 
-# execfile(r'E:\GitRes\pythonUE4\Example\importAsset.py')
+# execfile(r'E:\Git_Res\pythonUE4\Example\importAsset.py')
 
 import unreal
 import os
 
 
 # 要导入资产内容的源路径 
-asset_path = 'E:\GitRes\pythonUE4\Assets\Meshes\SM_TableRound.FBX'
+asset_path = 'E:\Git_Res\pythonUE4\Assets\Meshes\SM_TableRound.FBX'
 print(asset_path)
 
 # 要导入资产内容的目标路径 

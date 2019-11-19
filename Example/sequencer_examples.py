@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# 
 # Import the Unreal module to gain access to the UObject/UStruct types.
 # Import the JSON module to gain access to json export 
 import unreal, json, sequencer_key_examples
@@ -6,14 +9,15 @@ import unreal, json, sequencer_key_examples
 
 '''
 	Summary:
-		这是一个通过Python使用Sequencer的Render to Movie API的最小示例。这包括设置输出工作所需的最小设置。确保在项目中同时启用了“Python Editor Script Plugin”和“sequencerscript”插件。
+		这是一个通过Python使用Sequencer的Render to Movie API的最小示例。这包括设置输出工作所需的最小设置。
+		确保在项目中同时启用了“Python Editor Script Plugin”和“sequencerscript”插件。
 
 		打开Python交互控制台并使用：
 			import sequencer_examples
 			sequencer_examples.render_movie("/Game/TestSequence")
 		
 	Params:
-		sequencer_asset_path - 指向在渲染时应加载和播放的电影场景sequence asset的路径字符串。
+		sequencer_asset_path - 指向在渲染时应加载和播放的电影场景 sequence asset的路径字符串。
 '''
 def render_sequence_to_movie_minimal(sequencer_asset_path):
 	# If you do not override all of the settings in the AutomatedLevelSequenceCapture then the other settings are inherited
@@ -42,15 +46,15 @@ def render_sequence_to_movie_minimal(sequencer_asset_path):
 	
 '''
 	Summary:
-		This is an example of using Sequencer's Render to Movie API via Python. This covers setting all
-		possible values on the settings object and configures rendering out separate passes to image sequence.
-		Ensure you have enabled both the "Python Editor Script Plugin" and the "SequencerScripting" plugin in your project.
-		Open the Python interactive console and use:
+		这是一个通过Python使用Sequencer的Render to Movie API的例子。这包括在settings对象上设置所有可能的值，并配置渲染到图像序列的单独过程。
+		确保在项目中同时启用了“Python编辑器脚本插件”和“sequencerscript”插件。
+
+		打开Python交互控制台并使用：
 			import sequencer_examples
 			sequencer_examples.render_movie("/Game/TestSequence")
 		
 	Params:
-		sequencer_asset_path - String that points to the Movie Scene sequence asset we should load and play when we render.
+		sequencer_asset_path - 指向在渲染时应加载和播放的电影场景 sequence asset的路径字符串。
 	ToDo:
 		InheritedCommandLineArguments - Look up how this works.
 '''
@@ -165,7 +169,7 @@ def render_sequence_to_movie(sequencer_asset_path):
 	Summary:
 		ToDo:
 	Params:
-		track - The UMovieSceneTrack to convert to a dictionary
+		track - The UMovieSceneTrack to convert to a dictionary 要转换为字典的 UMovieSceneTrack
 	Returns:
 		ToDo:
 '''
@@ -234,7 +238,7 @@ def sequence_to_json(sequence):
 
 '''
 	Summary:
-		Populates the specified sequence and track with some test sections.
+		Populates the specified sequence and track with some test sections. 用一些测试sections填充指定的序列和轨迹。
 	Params:
 		sequence - The UMovieScene to populate
 		track - The track within the movie scene to create sections from.
@@ -249,12 +253,12 @@ def populate_track(sequence, track, num_sections = 1, section_length_seconds = 1
 
 '''
 	Summary:
-		Populates the specified sequence and object binding with some test sections.
+		使用指定的测试部分填充指定的序列和对象绑定。
 	Params:
 		track - The UMovieScene to populate
-		binding - The FMovieSceneObjectBindingID to create sections for.
-		num_sections - The number of sections to create.
-		section_length_seconds - The length of each section it is creating.
+		binding - The FMovieSceneObjectBindingID to create sections for. 要为其创建 sections 的 FMovieSceneObjectBindingID。
+		num_sections - The number of sections to create. 要创建的sections数。
+		section_length_seconds - The length of each section it is creating. 它创建的每个sections的长度
 '''
 def populate_binding(sequence, binding, num_sections = 1, section_length_seconds = 1):
 
@@ -263,20 +267,22 @@ def populate_binding(sequence, binding, num_sections = 1, section_length_seconds
 
 '''
 	Summary:
+		在指定目录下创建具有给定名称的 level sequence 。这是一个如何创建 level sequence 资源的示例，
+		如何将当前映射中的对象添加到序列中，以及如何创建一些示例绑定/etc。
 		Creates a level sequence with the given name under the specified directory. This is an example of how to create Level Sequence assets,
 		how to add objects from the current map into the sequence and how to create some example bindings/etc.
 	Params:
-		asset_name - Name of the resulting asset, ie: "MyLevelSequence"
-		package_path - Name of the package path to put the asest into, ie: "/Game/LevelSequences/"
+		asset_name - Name of the resulting asset, ie: "MyLevelSequence" 所得资产的名称，即：“MyLevelSequence”
+		package_path - Name of the package path to put the asest into, ie: "/Game/LevelSequences/" 要将asest放入的包路径的名称
 	Returns:
-		The created LevelSequence asset.
+		The created LevelSequence asset. 创建LevelSequence资源。
 '''
 def create_level_sequence(asset_name, package_path = '/Game/'):
 
 	sequence = unreal.AssetToolsHelpers.get_asset_tools().create_asset(asset_name, package_path, unreal.LevelSequence, unreal.LevelSequenceFactoryNew())
 
-	floor = unreal.load_object(None, "/Game/Map.Map:PersistentLevel.Floor")
-	sm_component = unreal.load_object(None, "/Game/Map.Map:PersistentLevel.Floor.StaticMeshComponent0")
+	floor = unreal.load_object(None, "/Game/NewMap.NewMap:PersistentLevel.Floor")
+	sm_component = unreal.load_object(None, "/Game/NewMap.NewMap:PersistentLevel.Floor.StaticMeshComponent0")
 
 	floor_binding = sequence.add_possessable(floor)
 	floor_binding.add_track(unreal.MovieScene3DTransformTrack)
@@ -328,3 +334,7 @@ def create_sequence_from_selection(asset_name, length_seconds = 5, package_path 
 		print("{0} is bound as {1}".format(actor, binding.get_id()))
 
 	return sequence
+
+
+if __name__ == "__main__":
+	create_level_sequence("MyLevelSequence", package_path = '/Game/a/')
