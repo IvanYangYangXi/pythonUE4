@@ -68,8 +68,8 @@ def buildSkeletalMeshImportOptions():
     options = unreal.FbxImportUI()
     # unreal.FbxImportUI
     options.set_editor_property('import_mesh', True)
-    options.set_editor_property('import_textures', True)
-    options.set_editor_property('import_materials', True)
+    options.set_editor_property('import_textures', False)
+    options.set_editor_property('import_materials', False)
     options.set_editor_property('import_as_skeletal', True)  # Skeletal Mesh
     # unreal.FbxMeshImportData
     options.skeletal_mesh_import_data.set_editor_property('import_translation', unreal.Vector(0.0, 0.0, 0.0))

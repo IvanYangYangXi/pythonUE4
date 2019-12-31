@@ -1,14 +1,27 @@
 {
-    "python.pythonPath": "D://Epic Games//UE_4.20//Engine//Source//ThirdParty//Python//Win64//python.exe",
+    //"python.pythonPath": "D://Epic Games//UE_4.20//Engine//Source//ThirdParty//Python//Win64//python.exe",
+    "python.pythonPath": "C:\\UE_4.23\\Engine\\Binaries\\ThirdParty\\Python\\Win64\\python.exe",
+
+    // "python.autoComplete.extraPaths": [ 
+    //     "D://Epic Games//UE_4.20//Engine//Source//ThirdParty//Python//Win64//Lib",
+    //     "D://Epic Games//UE_4.20//Engine//Source//ThirdParty//Python//Win64//python27.zip",
+    //     "D://Epic Games//UE_4.20//Engine//Source//ThirdParty//Python//Win64//DLLs",
+    //     "D://Epic Games//UE_4.20//Engine//Source//ThirdParty//Python//Win64//lib",
+    //     "D://Epic Games//UE_4.20//Engine//Source//ThirdParty//Python//Win64//lib//plat-win",
+    //     "D://Epic Games//UE_4.20//Engine//Source//ThirdParty//Python//Win64//lib//lib-tk",
+    //     "D://Epic Games//UE_4.20//Engine//Source//ThirdParty//Python//Win64",
+    //     "D://Epic Games//UE_4.20//Engine//Source//ThirdParty//Python//Win64//lib//site-package",
+    //     "C:/Users/Administrator/Documents/Unreal Projects/MyProject420/Intermediate/PythonStub"
+    //   ], 
     "python.autoComplete.extraPaths": [ 
-        "D://Epic Games//UE_4.20//Engine//Source//ThirdParty//Python//Win64//Lib",
-        "D://Epic Games//UE_4.20//Engine//Source//ThirdParty//Python//Win64//python27.zip",
-        "D://Epic Games//UE_4.20//Engine//Source//ThirdParty//Python//Win64//DLLs",
-        "D://Epic Games//UE_4.20//Engine//Source//ThirdParty//Python//Win64//lib",
-        "D://Epic Games//UE_4.20//Engine//Source//ThirdParty//Python//Win64//lib//plat-win",
-        "D://Epic Games//UE_4.20//Engine//Source//ThirdParty//Python//Win64//lib//lib-tk",
-        "D://Epic Games//UE_4.20//Engine//Source//ThirdParty//Python//Win64",
-        "D://Epic Games//UE_4.20//Engine//Source//ThirdParty//Python//Win64//lib//site-package",
-        "C:/Users/Administrator/Documents/Unreal Projects/MyProject420/Intermediate/PythonStub"
-      ], 
+      "C://UE_4.23//Engine//Binaries//ThirdParty//Python//Win64//Lib",
+      "C://UE_4.23//Engine//Binaries//ThirdParty//Python//Win64//python27.zip",
+      "C://UE_4.23//Engine//Binaries//ThirdParty//Python//Win64//DLLs",
+      "C://UE_4.23//Engine//Binaries//ThirdParty//Python//Win64//lib",
+      "C://UE_4.23//Engine//Binaries//ThirdParty//Python//Win64//lib//plat-win",
+      "C://UE_4.23//Engine//Binaries//ThirdParty//Python//Win64//lib//lib-tk",
+      "C://UE_4.23//Engine//Binaries//ThirdParty//Python//Win64",
+      "C://UE_4.23//Engine//Binaries//ThirdParty//Python//Win64//lib//site-package",
+      "C://Users//12580//Documents//GitHub//pythonUE4"
+    ], 
 }
